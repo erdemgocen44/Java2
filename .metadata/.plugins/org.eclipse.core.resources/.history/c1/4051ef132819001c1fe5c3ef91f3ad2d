@@ -1,0 +1,16 @@
+package swing1;
+
+import javax.swing.JFrame;
+
+public class IlkFrame {
+public static void main(String[] args) {
+	
+	JFrame ilkFrame=new JFrame();
+	ilkFrame.setSize(400,400);
+	ilkFrame.setTitle("Ýlk Frame");
+	ilkFrame.setVisible(true);
+	
+	
+	
+}
+}

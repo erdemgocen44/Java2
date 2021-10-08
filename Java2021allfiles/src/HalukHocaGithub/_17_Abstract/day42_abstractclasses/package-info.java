@@ -1,0 +1,1 @@
+package HalukHocaGithub._17_Abstract.day42_abstractclasses;

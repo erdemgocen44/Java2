@@ -1,0 +1,48 @@
+package swing2;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.Toolkit;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+public class ButtonUygulamasi extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ButtonUygulamasi frame = new ButtonUygulamasi();
+					frame.setVisible(true);
+					frame.setLocationRelativeTo(null);//frame i ekranýn tam ortasýnda açar
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public ButtonUygulamasi() {
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//Dimension dmDimension=Toolkit.getDefaultToolkit().getScreenSize();//Ekranýn 
+		setBounds(100, 100, 500, 500);
+		//setExtendedState(JFrame.MAXIMIZED_BOTH);//Uygulama ekraný kaplar
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+	}
+
+}

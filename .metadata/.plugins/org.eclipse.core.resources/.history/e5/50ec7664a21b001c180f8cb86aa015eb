@@ -1,0 +1,139 @@
+package codeforlife.dal;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import codeforlife.contract.Author;
+import codeforlife.core.CoreHelper;
+import codeforlife.interfaces.DALInterfaces;
+
+public class E  extends CoreHelper implements DALInterfaces<Author>{
+
+	Statement statement = null;
+	Connection connection = null;
+	ResultSet rs = null;
+	
+	@Override
+	public boolean insert(Author entity) throws SQLException {
+		connection = getConnection();
+		statement = connection.createStatement();
+		boolean key = false;
+		// INSERT INTO DIRECTORY VALUES(directory_seq.nextVal, 'Mehmet',
+		// 'Ozbay','23232323', 'aligmail.com','lippstadt');
+		String query = "INSERT INTO Author VALUES(author_seq.nextVal,'" + entity.getAuthorName()+ "','"
+				+ entity.getAuthorBiography() + "')";
+		try {
+
+			statement.executeUpdate(query);
+
+			key = true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			statement.close();
+			connection.close();
+		}
+		return key;
+		
+	}
+
+	@Override
+	public List<Author> getAll() throws SQLException {
+		ArrayList<Author> list = new ArrayList<>();
+		connection = getConnection();
+		String query = "select * from Author";
+		Author  author;
+		try {
+			statement = connection.createStatement();
+			rs = statement.executeQuery(query);
+			while (rs.next()) {
+				author = new Author(rs.getInt("author_id"), rs.getString("author_name"), rs.getString("author_biography"));
+				list.add(author);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 finally {
+				connection.close();
+				statement.close();
+				rs.close();
+			}
+
+		return list;
+		
+	}
+
+	@Override
+	public boolean delete(int id) throws SQLException {
+		connection = getConnection();
+		String query = "delete  from author where author_id=" + id;
+		try {
+			statement= connection.createStatement();
+			statement.executeUpdate(query);
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		} finally {
+			connection.close();
+			statement.close();
+		}
+	}
+
+	@Override
+	public boolean update(Author entity) throws SQLException {
+		connection = getConnection();
+		String query = "update author set author_name='" + entity.getAuthorName() + "', author_biography='" 
+		+ entity.getAuthorBiography()+ "' where author_id = " + entity.getId();
+		//update author set author_name='Ahmet', author_biography='ajsdhiasnd naosdjaosdksa' where id= 10
+		
+		System.out.println(query);
+		try {
+			statement= connection.createStatement();
+			statement.executeUpdate(query);
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		} finally {
+			connection.close();
+			statement.close();
+		}
+		
+	}
+
+	@Override
+	public List<Author> getBySearch(String searchText) throws SQLException {
+		ArrayList<Author> list = new ArrayList<>();
+		connection = getConnection();
+		String query = "select * from author where lower(author_name) like '%"+searchText.toLowerCase() +"%' or lower(author_biography) like '%"+searchText.toLowerCase() +"%'";
+		
+		Author author;
+		try {
+			statement = connection.createStatement();
+			
+			rs = statement.executeQuery(query);
+			while (rs.next()) {
+				author = new Author(rs.getInt("author_id"), rs.getString("author_name"), rs.getString("author_biography"));
+				list.add(author);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			connection.close();
+			statement.close();
+			rs.close();
+		}
+		return list;
+	}
+
+}

@@ -1,0 +1,29 @@
+EXCEPTIONS
+
+---> Iki tur exceptions vardir.
+
+a) Compile Time (cheked) Exceptions :
+Kod creat edilirken java nin ongordugu olasi sorunlara karsi
+hatanin altinin cizilmesidir...
+Her alti kirmizi cizilen kod exceptions degildir.
+
+b) Run Time (uncheked) Excptions :
+Kod run edildiginde olusan hataya (exceptions a) yani istisnaya denir.
+
+---> Kod creat edilirken Exceptions kullanilmasi gerekirse :
+
+###> Add throws declarations : Hata olustugunda concole a hata ile ilgili mesaj verir.
+###> try-catch block : Hata olustugunda hatanin yazdirilmasi ve handle edilmesini saglar.
+
+try block tan sonra en az bir tane catch blok olmali yoksa CTE verir.
+
+try block hatasiz calisirsa catch block calismaz. try body de calismis olur.
+
+tek try ama býrden cok catch block larý arasýnda yukarýdan asagýya dogru chýld parents ýlýskýsý olmalý.
+Yoksa CTE verir.. 
+FIETO ;
+F-->fileNotOutOfBoundExceptions
+IO-->inputOuputExceptions
+E-->Exceptions
+T-->throwledExceptions
+O-->Object

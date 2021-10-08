@@ -1,0 +1,10 @@
+package techproed.JDBCExamples;
+
+public class Jdbc4DMLInsert {
+
+	public static void main(String[] args) {
+
+		
+	}
+
+}

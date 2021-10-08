@@ -1,0 +1,10 @@
+package swing1;
+
+public class myFrame {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package techproed.JDBCExamples;
+
+public class Jdbc4DML {
+
+	public static void main(String[] args) {
+
+		
+	}
+
+}

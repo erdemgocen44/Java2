@@ -1,0 +1,5 @@
+package codeforlife.dal;
+
+public class Employee {
+
+}

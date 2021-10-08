@@ -1,0 +1,61 @@
+package swing2;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.Toolkit;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import java.awt.Font;
+import java.awt.Image;
+import java.awt.Color;
+import javax.swing.ImageIcon;
+
+public class ButtonUygulamasi extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ButtonUygulamasi frame = new ButtonUygulamasi();
+					frame.setVisible(true);
+					frame.setLocationRelativeTo(null);//frame i ekranýn tam ortasýnda açar
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public ButtonUygulamasi() {
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//Dimension dmDimension=Toolkit.getDefaultToolkit().getScreenSize();//Ekranýn 
+		setBounds(100, 100, 500, 500);
+		//setExtendedState(JFrame.MAXIMIZED_BOTH);//Uygulama ekraný kaplar
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton btnKaydet = new JButton("Kaydet");
+		ImageIcon imageIcon = new ImageIcon(getClass().getResource("/1.jpg"));
+		btnKaydet.setIcon(imageIcon);
+		btnKaydet.setForeground(Color.RED);
+		btnKaydet.setFont(new Font("Sitka Text", Font.BOLD, 20));
+		btnKaydet.setBounds(43, 100, 128, 70);
+		contentPane.add(btnKaydet);
+		
+	}
+}

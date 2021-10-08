@@ -1,0 +1,23 @@
+package swing1;
+
+import java.awt.Color;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+
+public class MyFrame {
+
+	public MyFrame() {
+		JFrame ilkFrame=new JFrame();
+
+		ilkFrame.setSize(400,400);
+		ilkFrame.setTitle("Ýlk Frame");
+		ilkFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		ImageIcon frameIcon=new ImageIcon("Images/1.jpg");
+		ilkFrame.setIconImage(frameIcon.getImage());
+		ilkFrame.getContentPane().setBackground(new Color(38, 212, 177));
+		ilkFrame.setVisible(true);
+		
+}
+
+}

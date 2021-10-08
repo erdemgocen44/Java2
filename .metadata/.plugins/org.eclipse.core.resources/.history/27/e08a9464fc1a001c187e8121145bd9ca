@@ -1,0 +1,5 @@
+package codeforlife.contract;
+
+public class Employee {
+
+}

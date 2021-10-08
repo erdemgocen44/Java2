@@ -1,0 +1,7 @@
+ String = daha yavas ,Immutable==> degisemez,
+
+            StringBuffer =mutable==>degisebilir,less efficient/ daha yavas ,
+            StringBuffer synchronized,thread safe.
+
+           StringBuilders = mutable==>degisebilir ,
+           not senkronized/not thread safe,fakat more efficient(daha etkili,ve hizli )

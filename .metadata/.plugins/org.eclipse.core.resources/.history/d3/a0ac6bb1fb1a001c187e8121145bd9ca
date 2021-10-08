@@ -1,0 +1,55 @@
+package codeforlife.fe;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.event.AncestorEvent;
+import javax.swing.event.AncestorListener;
+
+import codeforlife.utilities.Helper;
+import java.awt.SystemColor;
+import javax.swing.JTextField;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
+public class EmployeFE {
+
+	 Helper helper = new Helper();
+	JPanel paneEmployeFE; 
+	public EmployeFE() {
+
+	}
+
+	/**
+	 * @wbp.parser.entryPoint
+	 */
+	public  JPanel getPaneEmploye() {
+		paneEmployeFE = new JPanel();
+		paneEmployeFE.setLayout(null);
+		paneEmployeFE.setBounds(40, 40, 960, 560);
+		
+		
+		JPanel paneEmployeTitel = new JPanel();
+		paneEmployeTitel.setLayout(null);
+		paneEmployeTitel.setBackground(new Color(58, 81, 104));
+		paneEmployeTitel.setBounds(0, 30, 960, 50);
+		paneEmployeFE.add(paneEmployeTitel);
+		
+		JLabel lblEmployeTitel = new JLabel("Employes");
+		lblEmployeTitel.setForeground(Color.WHITE);
+		lblEmployeTitel.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 16));
+		lblEmployeTitel.setBounds(20, 0, 188, 50);
+		paneEmployeTitel.add(lblEmployeTitel);
+		
+	
+		return paneEmployeFE;
+
+	}
+}

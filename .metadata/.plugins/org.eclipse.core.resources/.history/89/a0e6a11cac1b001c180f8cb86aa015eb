@@ -1,0 +1,89 @@
+package codeforlife.fe;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.event.AncestorEvent;
+import javax.swing.event.AncestorListener;
+
+import codeforlife.utilities.Helper;
+import java.awt.SystemColor;
+import javax.swing.JTextField;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTable;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class EmployeFE {
+
+	 Helper helper = new Helper();
+	JPanel paneEmployeFE; 
+	private JTable table;
+	private JButton btnSearch;
+	public EmployeFE() {
+
+	}
+
+	/**
+	 * @wbp.parser.entryPoint
+	 */
+	public  JPanel getPaneEmploye() {
+		paneEmployeFE = new JPanel();
+		paneEmployeFE.setBounds(40, 40, 960, 560);
+		paneEmployeFE.setLayout(null);
+		
+		
+		JPanel paneEmployeTitel = new JPanel();
+		paneEmployeTitel.setBounds(0, 30, 960, 50);
+		paneEmployeTitel.setLayout(null);
+		paneEmployeTitel.setBackground(new Color(58, 81, 104));
+		paneEmployeFE.add(paneEmployeTitel);
+		
+		JLabel lblEmployeTitel = new JLabel("Employes");
+		lblEmployeTitel.setForeground(Color.WHITE);
+		lblEmployeTitel.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 16));
+		lblEmployeTitel.setBounds(20, 0, 188, 50);
+		paneEmployeTitel.add(lblEmployeTitel);
+		
+		table = new JTable();
+		table.setBounds(34, 101, 830, 278);
+		paneEmployeFE.add(table);
+		
+		JButton btnAddButton = new JButton("Add");
+		btnAddButton.setFont(new Font("Verdana", Font.BOLD, 20));
+		btnAddButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnAddButton.setBounds(34, 453, 155, 50);
+		paneEmployeFE.add(btnAddButton);
+		
+		JButton btnUpdate = new JButton("Update");
+		btnUpdate.setFont(new Font("Verdana", Font.BOLD, 20));
+		btnUpdate.setBounds(237, 453, 155, 50);
+		paneEmployeFE.add(btnUpdate);
+		
+		JButton btnRemove = new JButton("Remove");
+		btnRemove.setFont(new Font("Verdana", Font.BOLD, 20));
+		btnRemove.setBounds(641, 453, 155, 50);
+		paneEmployeFE.add(btnRemove);
+		
+		btnSearch = new JButton("Search");
+		btnSearch.setFont(new Font("Verdana", Font.BOLD, 20));
+		btnSearch.setBounds(436, 453, 155, 50);
+		paneEmployeFE.add(btnSearch);
+		
+	
+		return paneEmployeFE;
+
+	}
+}

@@ -1,0 +1,211 @@
+GITHUB DERS NOTLARI
+
+git kurulumu için		===> https://git-scm.com/downloads 
+					    ===>(install için tüm aþamalarda next iþaretlenecek, deðiþiklik yapýlmayacak.)
+======================================================================================================================
+
+Cmd KOMUTLARI (KomutIslemi)
+
+======================================================================================================================
+   1) C:\>dir komutu ---> Butun klasorleri gosterir (C'nin icinde bunlar)
+   2) C:\>cd users ---> Diger klasorlere gecebiliyoruz(users klasorunun icine giriyor)
+   3) C:\>dir ---> users klasorunun icinde hangi klasor oldugunu gormek istiyorum
+   ! Hangi klasore girmek istiyorsak ayni islemleri tekrarliyoruz
+   4) cd .. ---> Bir onceki klasore gidiyor
+   5) cd / ---> En basa gidiyor
+   6) cls ---> Ekrani temizliyor
+
+
+   KLASOR OLUSTURMA
+   7.a) 
+      - C:\>mkdir deneme -> ENTER deyince (mk --make directory)
+      Bu Komutla direkt olarak Toshiba-PC nin icine deneme isminde klasor olusturuyoruz...
+   
+   7.b) 
+      Masaustunde klasor olusturma
+      
+      - C:\>cd users (users klasorune giriyoruz)
+
+      - C:\Users>cd Toshiba-PC (Toshiba-PC klasorune giriyoruz)
+
+      - C:\Users\Toshiba-PC>cd desktop (masaustune gidiyoruz)
+
+      - C:\Users\Toshiba-PC\Desktop>mkdir test1 (masaustunde test1 klasorunu olusturuyoruz)
+
+      - C:\Users\Toshiba-PC>\Desktop>cd test1 (olusturdugumuz test1 klasorunun icine giriyoruz)
+
+      - C:\Users\Toshiba-PC>\Desktop\test1> (test1 klasorunun icindeyiz)
+     
+      - C:\Users\Toshiba-PC>\Desktop\test1>mkdir test2 (test1 klasorunun icinde test2 klasoru olusturduk)
+
+      - C:\Users\Toshiba-PC>\Desktop\test1>mkdir test3 (test1 klasorunun icinde test3 klasoru olusturduk)
+
+      - C:\Users\Toshiba-PC>\Desktop\test1>mkdir test4 (test1 klasorunun icinde test4 klasoru olusturduk)
+
+      - C:\Users\Toshiba-PC>\Desktop\test1>dir (dir ile klasorun icine bakiyoruz test2-test3 ve test4 klasorleri gozukuyor)
+
+
+   KLASOR SILME (rm--remove directory)
+
+   8.a) 
+      - C:\Users\Toshiba-PC>\Desktop\test1>rmdir test4 ( test1'de olusturdugumuz test4 klasorunu sildik)
+      test 1 i tamamen silmenin yolu rmdir ile icini tamamen bosaltip sonra ust klasorunden sonra silebiliriz...
+   
+      Peki sildigimizi nasil anlayacagiz?
+      
+   8.b) 
+      - C:\Users\Toshiba-PC>\Desktop\test1>dir ( dir ile silip silmedigini gorebiliriz)
+
+======================================================================================================================   
+   - VKS -- Versiyon kontrol sistemi
+   
+   - Versiyon Kontrol Sistemi, seçili dosyalarýn bir önceki versiyona döndürülmesi , 
+   *** Projenin tamamýnýn bir önceki versiyona döndürülmesi, 
+   *** Zaman içerisinde yapýlan deðiþikliklerin karþýlaþtýrýlmasý, 
+   *** Probleme neden olabilecek deðiþikliklerin en son kimin tarafýndan yapýldýðý gibi 
+   *** Bir çok iþlemin gerçekleþtirilebilmesini saðlar.
+
+   *** Genel olarak VKS kullanmak ;;; 
+   *** Deðiþiklik yaptýðýnýz dosyalar üzerinde bir þeyleri berbat ettiðinizde 
+   *** Veya bir þeyleri kaybettiðinizde kolayca geri getirebilmeniz anlamýna gelmektedir.
+   
+   - Yerel VKS -- Local Bilgisayardaki Versiyon kontrol sistemi
+   *** YVKS, versiyon kontrol sisteminin lokal bilgisayarda tutulduðu sistemlerdir.
+   *** Bu sistemde geliþtirici kendi lokal bilgisayarýnda uygulama ile ilgili versiyon sistemi kullanabilir
+   *** Ancak farklý developerlar ile çalýþmak isterse YVKS sistemi bunun için bir çözüm üretemez.
+   *** Kullanimi cok avantajli degil...
+   
+   - Merkezi VKS -- Merkezi serverdaki versiyon kontrol sistemi | sýkýntýsý: serverda arýza olunca proje durur.
+   *** Bu sistemde verisyonlarýn depolanmasý ve kontrolü uzaktaki bir sunucu üzerinden yapýlmaktadýr. 
+   *** Lokal cihazlarda herhangi bir depolama ve kontrol yapýlmaz .
+   *** Bu sistemin en büyük sorunu eðer o sunucuda bir sorun oluþtuðu andan itibaren hiç kimse iþ yapamaz 
+   *** veya üzerinde çalýþmakta olduklarý herhangi bir þeye sürüm deðiþikliklerini kaydedemezler.
+   
+   - Daðýtýk VKS -- Projede çalýþanlar ve server'de tutulan VKS'dir. | avantajý her pc veya server yedekleri tutar.
+   *** Ýþte tam da burada devreye Daðýtýk Versiyon Kontrol Sistemleri (DVKS) giriyor. 
+   *** Bir DVKS’de hem merkezi bir sunucu bulunmaktadýr, hem de client larda da ayný yapýnýn bir kopyasý bulunmaktadýr.
+   *** Dolayýsýyla eðer bir sunucu devre dýþý kalýrsa , client larda da ayný yapý bulunduðundan 
+   *** Sunucu devreye girene kadar her bir geliþtirici lokalde çalýþabilirken, 
+   *** Sunucu devreye alýndýðýnda client lar tarafýndan sunucu rahatlýkla güncelleyebilir. 
+   *** Her client, en nihayetinde tüm verilerin tam bir yedeðidir aslýnda...
+====================================================================================================================== 
+  
+   - git --version ===> git versionunu gösterir. Ayrýca pc de var olup olmadýðýný anlarýz.
+   
+   - git config --global color.ui true 	===> git komutlarýný yazdýðýmýzda sonuçlarý renkli renkli gösterir...
+   *** System parametresi kullanýldýðýnda tüm kullanýcýlar ve tüm repolar üzerinde etkili olur
+   *** Global parametresi geçerli kullanýcýnýn tüm repolar üzerinde etkili olur
+   *** Local parametresi ise sadece geçerli repo üzerinde etkili olur...
+   
+======================================================================================================================
+
+   Repository
+
+   *** Versiyon kontrol sistemi ve birlikte çalýþma altyapýsýný ayrý tutmak istediðimiz her bir baðýmsýz yapýya repository denir.
+   *** Genellikle her proje için ayrý bir repository tanýmlanýr.
+
+   9) Local Repo Olusturma 
+   Local bilgisayarýmýzda bir projeyi versiyon sistemine alabilmek için git init komutu kullanýlýr. 
+   Bu komut kullanýlýnca proje klasöründe .git klasörü oluþturulur. Bu local repomuzu saklayacaktýr.
+   
+   - Once bir klasor olusturuyoruz olusturdugumuz klasorun icine de bir klasor olusturuyoruz 
+   - Komut sisteminden cd proj* diyerek son olusturdugumuz klasore geliyoruz
+   - git init komutunu yaziyoruz. Repo olusmus oluyor...
+   - dir / a:h ==> gizli olan .git dosyasini komutta gormemizi saglar..
+
+   10) Local Versiyon Olusturma -- (3 alanda 2 komut yardimiyla bir versiyon olusturmaya yarar)
+   *** Working Space --> .git klasörünün bulunduðu çalýþma alanýdýr. 
+   Klasörler ve dosyalar üzerinden deðiþiklik burada yapýlýr.
+   Degisikliklerin Stage Area ya gonderilmesini saglayan ortamdir...
+   
+   *** Staging Area --> Versiyon oluþturulacak olan dosya veya klasörlerin geçici olarak toplandýðý yerdir. 
+   Versiyon(commit) oluþturulduktan sonra otomatik olarak staging area boþaltýlýr...
+   
+   *** Commit Store --> Git her bir commit i ayrý bir versiyon olarak tutar.
+   Böylece yapýlan çeþitli deðiþikliklerden sonra projede sorunlar ortaya çýkarsa bir önceki commit e geri dönülebilir.
+
+
+   **********IMPORTANT**********************
+   - Degisiklik yapilan tum dosyalari stage'e gondermek icin ---> git add . (her versiyon olustururken yapmaliyiz)
+     ! Calisma alaninda olusturdugumuz ve degisiklik yaptigimiz dosyalari stage area'ya tasiyor
+     ! "git status" ile gorebiliriz 
+
+   - Sonra "git commit -m "first version"" ENTER diyerek bir commit (versiyon) olusturmus oluyoruz
+     ! Commit yapip yapmadigini "git log" --> ENTER ile gorebiliriz (Varolan commit'lerimizin listesini veriyor)
+
+   - Degisiklik yaparsak tekrardan "git add ." --> ile versiyon olusturuyoruz
+     Bunu da git status --> ile gorebiliriz
+
+   - git commit -m "yeni kodlar eklendi" --> ile yeni commit (versiyon) olusturduk
+     Tekrardan git log --> ile commit olusturup olusturmadigimizi kontrol edebiliriz
+
+   - "git log" --> yerine 
+   --> "git log --oneline"  kullanabiliriz. Daha sade bir gorunum saglar.
+     ! "git log --oneline" dedigimizde bize satir satir commitleri gosterir ve uzun olan kodlarin ilk 7 kodunu gosterir 
+     Istedigimiz commit'in kodunu kopyalayip 
+   ---> "git show 824c33e" ENTER diyerek o commit'in icerigindeki yazilari gorebiliriz.. 824c33e her komutta farklidir bu kod..
+   824c33e bu kodara hash kodu denir...
+
+   11) Degisiklikleri Geri Alma
+   Working Space
+   "git restore src/index.html" --> Tek bir dosyadaki son kaydedilen satiri siler...
+   "git restore ." ---> Son yaptigimiz butun satirlardaki degisiklikleri siler...
+ 
+   --> Working Space
+   
+   "git restore [dosya]" --> Tek bir dosyayý iptal eder
+   "git restore ." --> Tüm dosyalarý iptal eder
+   
+   --> Stage Area
+   
+   "git restore --staged [dosya]" --> Tek bir dosyayý iptal eder
+   "git restore --staged ." --> Tüm dosyalarý iptal eder
+   
+   --> Working Space ve Stage Area
+   
+   "git reset --hard" -->  Working space deki deðiþiklikleri iptal eder, staging area yý boþaltýr.
+   
+   --> Commits
+   "git checkout [hash(7 haneli kod)] [dosya]" -->  Dosya, hash ile belirtilen versiyona döner
+   "git checkout [hash(7 haneli kod)] ." --> Hash deðeri verilen versiyona döner
+
+   *** Git checkout lardan sonra deðiþikliklerin commit haline gelmesi için git add ve commit komutlarý unutulmamalýdýr...
+   
+   ~~~~~~~~~~Onceki versiyonlara donmenin 2 yolu var~~~~~~~~~~
+   1)
+   "git checkout [hash]2 --> Ýstenilen versiyonu geri alýr. Ancak bunun için sadece HEAD hareket ettirilir.
+   Yapýlan deðiþiklikler silinmez. Bu iþlemin de bir versiyon haline gelmesi için commit oluþturmak gerekir.
+
+   2)
+   "git reset --hard [hash]" --> Ýstenilen versiyona geri döner, bu versiyondan daha sonra yapýlan tüm
+    commit ler ve içerdiði deðiþiklikler geri alýnamayacak þekilde iptal edilir.
+    
+    BRANCH KOMUTLARI
+    
+    Master branch, projemizin ana yapýsýdýr. Zaman zaman bu ana yapýyý bozmadan bazý
+    denemeler yapmak ve gerekirse kolaylýkla bu denemeleri iptal etmek ya da master ile birleþtirmek için branch ler kullanýlýr. 
+    Branch ler içindeki deðiþiklikler master dan baðýmsýz olarak saklanýr.
+
+****====UYARI====*** ===> BU ÝÞLEM EN TEPEDEKÝ AKTÝF OLAN COMMIT ÝPTAL ETMÝYOR. ESKÝ COMMITI EN TEPEYE ALIYOR. ARDINDAN "git add ."+"git commit -m "message"" kullanýlmalýdýr.
+****====UYARI====*** ===> git log yaptýðýnýzda cmd ekranýnýn altýnda sorun olursa "Q"uit tuþuna basarak bundan kurtulabiliriz. 
+
+git reset --hard (hashcode)				===>working spacedeki deðiþiklikleri iptal eder staging areayý boþaltýr.
+*****************************************************************************************************************************
+git branch (isim)			===> branch oluþturma.
+git branch					===> branch'leri listeler. masterda bir branch'tir:) listenen branch'da sol tarfýnda *master *osman gibi bir þey varsa aktif olan branch * iþareti olan branch'tir.
+git checkout (branchismi) 	===> istediðimiz branch'e geçiþ yaparýz. hangi branch'te çalýþma yapýyorsak onu seçeriz
+****====UYARI====*** ===> DENEME YANILMA DURUMLARINI BRANCH'TE YAPMAK GEREKÝR.
+===> branch'te yapýlan deðiþiklikleri master'a taþýma için önce master'a geçiþ yapýlmalý.[git checkout master] ardýndan merge (birleþtirme) yapýlmalý
+git merge (branchismi)		===> branch veya master'i birleþtirme.
+git branch -d				===> branch silme.
+git branch -m				===> branch isim deðiþtirme.(aktif olan branch'in ismini deðiþtirir.)
+git clone [url]				===> githubdaki ni lokale alýrýz.
+git pull					===> klonlama yapýldýktan sonraki deðiþiklikleri(updateleri) lokale çekmek için kullanýlýr. bizde olmayan versiyonlarý çekmek için kullanýlýr.
+git push                    ===> klonlama yapýldýktan pc de yaptýðýmýz deðiþikleri githuba remote'a aktarma yapmak için kullanýlýr.
+
+****====UYARI====*** token durumu varsa google.com'a "github token" yazýyoruz.Personal access tokens kýsmýnda generete new access token yazýp token oluþturup password kýsmýna yazýlýp sorunu çözüyoruz
+
+git remote add origin[REMOTE_url] 		===> githuba 1 seferlik push ve pull yapabilmek için yazýlýr.bu code lokalde ilk defa proje yapýlacaksa yazýlýr.
+gitpush u origin master				===> githuba 1 seferlik push ve pull yapabilmek için yazýlýr.bu code lokalde ilk defa proje yapýlacaksa yazýlýr.
+
+git push --set-upstream origin (branchismi)	===> branch'ten git push yaparken remote(github'da) kullanýcýnýn yani senin branch tanýmlý deðilse bunu remote'a tanýmlamak için kullanýlýr.
